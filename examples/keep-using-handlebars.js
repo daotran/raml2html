@@ -80,8 +80,8 @@ var helpers = {
 };
 
 var partials = {
-  resource: fs.readFileSync(path.join(__dirname, 'resource.handlebars'), 'utf8'),
-  item: fs.readFileSync(path.join(__dirname, 'item.handlebars'), 'utf8')
+  resource: fs.readFileSync(path.join(__dirname, './../handlebars/resource.handlebars'), 'utf8'),
+  item: fs.readFileSync(path.join(__dirname, './../handlebars/item.handlebars'), 'utf8')
 };
 
 // Register handlebar helpers
@@ -97,7 +97,7 @@ partials.forEach(function(partialName) {
 var config = raml2html.getDefaultConfig();
 
 config.processRamlObj = function(ramlObj) {
-  var template = fs.readFileSync(path.join(__dirname, 'template.handlebars'), 'utf8');
+  var template = fs.readFileSync(path.join(__dirname, './../handlebars/template.handlebars'), 'utf8');
 
   ramlObj.config = {
     protocol: 'https:',

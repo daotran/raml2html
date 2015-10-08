@@ -42,7 +42,8 @@ function render(source, config) {
  */
 function getDefaultConfig(mainTemplate, templatesPath) {
   if (!mainTemplate) {
-    mainTemplate = './lib/template.nunjucks';
+    mainTemplate = './lib/templates/nunjucks/template.nunjucks';
+    //mainTemplate = './lib/templates/handlebars/template.handlebars';
 
     // When using the default template, make sure that Nunjucks isn't
     // using the working directory since that might be anything
